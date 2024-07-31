@@ -29,15 +29,15 @@ public class Program
 {
     public static void Main()
     {
-        var a = new TestClass { Id = 1, Name = "Test", Marks = new List<int> { 1, 2, 3 } };
-        var b = new TestClass { Id = 1, Name = "Test", Marks = new List<int> { 3, 2, 1 } };
+        var a = new Student { Id = 1, Name = "Test", Marks = new List<int> { 1, 2, 3 } };
+        var b = new Student { Id = 1, Name = "Test", Marks = new List<int> { 3, 2, 1 } };
 
         bool result = ObjectComparer.AreSimilar(a, b);
         Console.WriteLine(result); // True
     }
 }
 
-public class TestClass
+public class Student
 {
     public int Id { get; set; }
     public string Name { get; set; }

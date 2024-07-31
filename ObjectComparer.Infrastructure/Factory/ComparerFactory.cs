@@ -1,6 +1,6 @@
 using System;
 using ObjectComparer.Domain.Interface;
-using ObjectComparer.Infrastructure.Comparer;
+using ObjectComparer.Infrastructure.ObjectComparer;
 using ObjectComparer.Infrastructure.UnorderdComparer;
 
 namespace ObjectComparer.Infrastructure.Factory
@@ -9,10 +9,10 @@ namespace ObjectComparer.Infrastructure.Factory
 	{
         public IObjectComparer CreateObjectComparer()
         {
-            CollectionCompare collectionComparer = null;
-            ObjectComparer objectComparer = new ObjectComparer(collectionComparer);
-            collectionComparer = new CollectionCompare(objectComparer);
-            objectComparer = new ObjectComparer(collectionComparer);
+            CollectionComparer collectionComparer = null;
+            DeepObjectComparer objectComparer = new DeepObjectComparer(collectionComparer);
+            collectionComparer = new CollectionComparer(objectComparer);
+            objectComparer = new DeepObjectComparer(collectionComparer);
             return objectComparer;
         }
     }
