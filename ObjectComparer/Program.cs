@@ -7,7 +7,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        // var comparer = new SimilarObjectComparer();
         var comparerFactory = new ComparerFactory();
         var comparer = comparerFactory.CreateObjectComparer();
 

@@ -9,11 +9,11 @@ namespace ObjectComparer.Infrastructure.Comparer
     /// This class handles the deep comparison of two objects,
     /// checking for similarity of value types and reference types.
     /// </summary>
-    public class DeepObjectComparer : IObjectComparer
+    public class ObjectComparer : IObjectComparer
     {
         private readonly IValueComparer _collectionComparer;
 
-        public DeepObjectComparer(IValueComparer collectionComparer)
+        public ObjectComparer(IValueComparer collectionComparer)
         {
             _collectionComparer = collectionComparer;
         }

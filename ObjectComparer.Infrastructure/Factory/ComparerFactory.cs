@@ -10,9 +10,9 @@ namespace ObjectComparer.Infrastructure.Factory
         public IObjectComparer CreateObjectComparer()
         {
             CollectionCompare collectionComparer = null;
-            DeepObjectComparer objectComparer = new DeepObjectComparer(collectionComparer);
+            ObjectComparer objectComparer = new ObjectComparer(collectionComparer);
             collectionComparer = new CollectionCompare(objectComparer);
-            objectComparer = new DeepObjectComparer(collectionComparer);
+            objectComparer = new ObjectComparer(collectionComparer);
             return objectComparer;
         }
     }
