@@ -5,12 +5,12 @@ using ObjectComparer.Domain.Interface;
 
 namespace ObjectComparer.Infrastructure.UnorderdComparer
 {
-    public class UnorderedCollectionComparer : IValueComparer
+    public class ollectionCompare : IValueComparer
     {
         private readonly IObjectComparer _objectComparer;
         
 
-        public UnorderedCollectionComparer(IObjectComparer objectComparer)
+        public ollectionCompare(IObjectComparer objectComparer)
         {
             _objectComparer = objectComparer;
         }
